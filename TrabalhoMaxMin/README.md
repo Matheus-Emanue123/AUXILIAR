@@ -38,9 +38,11 @@ void MaxMin1(std::vector<int>& A, int& Max, int& Min) {
     }
 }
 ```
-    A função `MaxMin1` percorre um vetor de inteiros `A` e encontra o valor máximo e mínimo de forma linear. O processo começa inicializando as variáveis `Max` e `Min` com o primeiro elemento do vetor. Em seguida, um laço percorre o vetor a partir do segundo elemento, comparando cada valor com `Max` e `Min`, atualizando-os se um elemento maior ou menor for encontrado, respectivamente. 
 
-    O número exato de comparações realizadas é \(2(n-1)\), pois para cada um dos \(n-1\) elementos restantes são feitas duas comparações (uma para o máximo e outra para o mínimo). No entanto, o custo computacional assintótico é \(O(n)\), já que o fator constante não altera o crescimento com grandes valores de \(n\).
+
+A função `MaxMin1` percorre um vetor de inteiros `A` e encontra o valor máximo e mínimo de forma linear. O processo começa inicializando as variáveis `Max` e `Min` com o primeiro elemento do vetor. Em seguida, um laço percorre o vetor a partir do segundo elemento, comparando cada valor com `Max` e `Min`, atualizando-os se um elemento maior ou menor for encontrado, respectivamente. 
+
+O número exato de comparações realizadas é \(2(n-1)\), pois para cada um dos \(n-1\) elementos restantes são feitas duas comparações (uma para o máximo e outra para o mínimo). No entanto, o custo computacional assintótico é \(O(n)\), já que o fator constante não altera o crescimento com grandes valores de \(n\).
 
 ### MinMax 2
 
@@ -170,16 +172,6 @@ markdown
 
 - **gerarVetorAleatorio**: Esta função gera um vetor de inteiros aleatórios de um tamanho especificado, sendo os possíveis valores para esse tamanho 1000, 10000, 100000 e 500000. Os valores dos inteiros são distribuídos uniformemente entre 0 e 1000.
 
-### Script Python
-
-```markdown
-Este script em Python lê um arquivo CSV chamado `resultados.csv` e separa seus dados em múltiplos arquivos CSV com base em combinações específicas de colunas. Ele cria dois diretórios, `PorFuncaoEstado` e `PorFuncaoVetor`, para armazenar os arquivos de saída. Para cada linha do arquivo de entrada, o script extrai os valores das colunas "Função", "Vetor" e "Estado". Em seguida, ele cria (se ainda não existirem) e escreve em arquivos CSV separados para cada combinação única de "Função" e "Estado" no diretório `PorFuncaoEstado`, e para cada combinação única de "Função" e "Vetor" no diretório `PorFuncaoVetor`. Isso permite organizar os dados de maneira mais granular e específica, facilitando análises posteriores.
-```
-
-### GNUplot
-
-GNUplot é utilizado para gerar gráficos a partir dos resultados dos testes. Os arquivos CSV gerados pelo programa em C++ são utilizados como entrada para o GNUplot, que cria gráficos mostrando o desempenho dos diferentes algoritmos em diferentes cenários. Os gráficos são salvos em arquivos de imagem para análise posterior.
-
 ### Variáveis Inicializadas
 
 Antes de iniciar os testes, várias variáveis são criadas e/ou inicializadas:
@@ -193,7 +185,13 @@ Antes de iniciar os testes, várias variáveis são criadas e/ou inicializadas:
 
 Essas variáveis são utilizadas ao longo da execução dos testes para armazenar dados temporários e salvar os resultados finais.
 
+### Script Python
 
+O script em Python lê um arquivo CSV chamado `resultados.csv` e separa seus dados em múltiplos arquivos CSV com base em combinações específicas de colunas. Ele cria um diretório, `PorFuncaoEstado`, para armazenar os arquivos de saída. Para cada linha do arquivo de entrada, o script extrai os valores das colunas "Função", "Vetor" e "Estado". Em seguida, ele cria (se ainda não existirem) e escreve em arquivos CSV separados para cada combinação única de "Função" e "Estado" no diretório `PorFuncaoEstado`. Isso permite organizar os dados de maneira mais granular e específica, facilitando análises posteriores.
+
+### GNUplot
+
+GNUplot é utilizado para gerar gráficos a partir dos resultados dos testes. Os arquivos CSV gerados pelo programa em C++ são utilizados como entrada para o GNUplot, que cria gráficos mostrando o desempenho dos diferentes algoritmos em diferentes cenários. Os gráficos são salvos em arquivos de imagem para análise posterior.
 
 ## 🧪 Resultados e Análises 
 
@@ -227,153 +225,137 @@ Cada linha subsequente representa os resultados de um teste específico, com os 
 
 Esses arquivos são gerados e atualizados durante a execução da função `executarTestes`, garantindo que todos os resultados sejam registrados de forma organizada e acessível para análises posteriores.
 
+### 🐍 Script Python para Separação de Dados
+
+Após executar o código principal, criamos um script em Python para separar os dados por cada função, facilitando a plotagem dos gráficos. Este script lê o arquivo `resultados.csv` e organiza os dados em múltiplos arquivos CSV com base em combinações específicas de colunas, armazenando-os em diretórios apropriados. Isso permite uma análise mais granular e específica dos resultados, auxiliando na visualização e interpretação dos dados através de gráficos.
+
+### 📊 Gráficos
+
+A seguir, apresentamos três gráficos que ilustram o desempenho dos algoritmos MinMax 1, MinMax 2 e MinMax 3 em diferentes cenários. Esses gráficos foram gerados utilizando o GNUplot a partir dos resultados dos testes, com o auxílio de um colega. Agradecimentos especiais ao [Joaquim Cézar](https://github.com/JoaquimCruz) pela colaboração.
+
+#### Gráfico 1: Tempo de Execução Médio MinMax1
+
+![Tempo de Execução Médio MinMax1](Resultados/DatasetsMinMax1.png)
+
+A análise do gráfico 1 mostra o tempo de execução médio do algoritmo MinMax1 em diferentes cenários. Observa-se que o tempo de execução aumenta linearmente com o tamanho do vetor, confirmando a complexidade \(O(n)\) do algoritmo. Em vetores ordenados de forma crescente, decrescente ou aleatória, o comportamento do algoritmo permanece consistente, demonstrando sua robustez e eficiência em diferentes condições de entrada. No entanto, é importante notar que, apesar da linearidade, o tempo absoluto de execução pode variar devido a fatores como a constante de tempo associada às operações de comparação e a eficiência do hardware utilizado.
+
+#### Gráfico 2: Tempo de Execução Médio MinMax2
+
+![Tempo de Execução Médio MinMax2](Resultados/DatasetsMinMax2.png)
+
+A análise do gráfico 2 mostra o tempo de execução médio do algoritmo MinMax2 em diferentes cenários. Assim como no MinMax1, o tempo de execução do MinMax2 também aumenta linearmente com o tamanho do vetor, confirmando a complexidade \(O(n)\) do algoritmo. No entanto, devido à otimização com a estrutura de controle `else if`, o MinMax2 tende a ser ligeiramente mais eficiente em cenários onde as comparações desnecessárias são evitadas. Em vetores ordenados de forma crescente, decrescente ou aleatória, o comportamento do algoritmo permanece consistente, demonstrando sua robustez e eficiência em diferentes condições de entrada. A diferença de desempenho entre os cenários é mínima, mas perceptível, especialmente em vetores grandes, onde a otimização pode resultar em uma redução significativa no tempo de execução absoluto.
+
+
+#### Gráfico 3: Tempo de Execução Médio MinMax3
+
+![Tempo de Execução Médio MinMax3](Resultados/DatasetsMinMax3.png)
+
+A análise do gráfico 3 mostra o tempo de execução médio do algoritmo MinMax3 em diferentes cenários. Assim como nos algoritmos anteriores, o tempo de execução do MinMax3 aumenta linearmente com o tamanho do vetor, confirmando a complexidade \(O(n)\) do algoritmo. No entanto, devido à abordagem de comparação em pares, o MinMax3 tende a ser mais eficiente em termos de número de comparações realizadas. Em vetores ordenados de forma crescente, decrescente ou aleatória, o comportamento do algoritmo permanece consistente, demonstrando sua robustez e eficiência em diferentes condições de entrada. A diferença de desempenho entre os cenários é mínima, mas perceptível, especialmente em vetores grandes, onde a otimização pode resultar em uma redução significativa no tempo de execução absoluto.
+
 
 ## 👨🏻‍🔬 Ambiente de Teste
 
 O código foi desenvolvido utilizando as seguintes ferramentas:
 
-[![Linguagem](https://img.shields.io/badge/Linguagem-C++-blue)](https://www.w3schools.com/c/c_intro.php)
-[![IDE](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blueviolet)](https://code.visualstudio.com/docs/?dv=linux64_deb)
-[![Sistema Operacional](https://img.shields.io/badge/ISO-Ubuntu%20Linux%2022.04-red)](https://ubuntu.com/)
+É importante conhecer o ambiente de teste para garantir a reprodutibilidade dos resultados e entender as possíveis variações de desempenho. Saber quais ferramentas e configurações foram utilizadas pode ajudar a identificar e resolver problemas de compatibilidade e desempenho em diferentes sistemas.
 
-Este projeto foi testado no seguinte ambiente:
+<div align="center">
 
-- *Sistema Operacional*: Ubuntu 22.04
-- *Compilador*: GCC 11.4.0
-- *Hardware*: 11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz, 8GB RAM, 512GB SSD
+| Linguagem | IDE | Sistema Operacional |
+|-----------|-----|---------------------|
+| [![Linguagem](https://img.shields.io/badge/Linguagem-C++-blue)](https://www.w3schools.com/c/c_intro.php) | [![IDE](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blueviolet)](https://code.visualstudio.com/docs/?dv=linux64_deb) | [![Sistema Operacional](https://img.shields.io/badge/ISO-Ubuntu%20Linux%2022.04-red)](https://ubuntu.com/) |
+
+</div>
+
+E foi testado no seguinte ambiente:
+
+<div align="center">
+
+| Sistema Operacional | Compilador | Hardware |
+|---------------------|------------|----------|
+| ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) | ![GCC](https://img.shields.io/badge/GCC-11.4.0-00599C?style=for-the-badge&logo=gnu&logoColor=white) | ![Intel](https://img.shields.io/badge/Intel-Core_i5_11th-0071C5?style=for-the-badge&logo=intel&logoColor=white) |
+
+</div>
+
+Além disso, é importante conhecer as especificações do ambiente onde o projeto foi desenvolvido e testado:
+
+- **Compilador**: GCC 11.4.0
+- **Hardware**: 8GB RAM, 512GB SSD
 
 ## 👨🏻‍💻 Compilação e Execução
 
-Existem duas maneiras de compilar e executar o programa:
+Para compilar e executar o projeto, siga os passos abaixo:
 
-### 1. Compilar gerando a matriz aleatoriamente.
- Para compilar o projeto gerando uma matriz de entrada aleatória, será necessário seguir os seguintes passos:
+### Clonagem do Repositório
 
-#### 1.1 - Verificar a versão do python  instalada em seu computador.
+Primeiro, clone o repositório do projeto para o seu ambiente local. Abra o terminal e execute o seguinte comando:
 
-O projeto foi feito com o python para linux na versão 3.10.12. Para checar a versão do python instalada, abra o terminal e execute o seguinte comando:
+```bash
+git clone <https://github.com/Matheus-Emanue123/AUXILIAR>
+cd TrabalhoMaxMin
+```
 
+### Instalação dos Pacotes Necessários
 
-python --version
+Certifique-se de que você tem todos os pacotes necessários instalados. No Ubuntu, você pode instalar os pacotes necessários com os seguintes comandos:
 
-
-É muito comum no linux esse comando não ser reconhecido, caso seja este o seu caso tente executar o seguinte comando:
-
-
-python3 --version
-
-
-Se ainda assim você não obtiver êxito, pode ser que você não tenha o python instalado em sua máquina. Para instalá-lo, siga os passos a seguir:
-
-1 - Primeiro, atualize sua lista de pacotes:
-
+```bash
 sudo apt update
+sudo apt install build-essential g++ gnuplot make python3
+```
 
-2 - Em seguida, instale o Python:
+Esses pacotes incluem:
 
+- `build-essential`: Conjunto de ferramentas de desenvolvimento, incluindo o compilador GCC.
+- `g++`: Compilador para a linguagem C++.
+- `gnuplot`: Ferramenta para geração de gráficos.
+- `make`: Utilitário para automatizar a compilação do projeto.
+- `python3`: Interpretador Python para executar scripts auxiliares.
 
-sudo apt install python3
+Certifique-se de que todos esses pacotes estão instalados para garantir a correta execução do projeto.
 
+### Compilação do Projeto
 
-3 - Depois, instale o pip, que é o gerenciador de pacotes do Python:
+Com os pacotes instalados, você pode compilar o projeto utilizando o Makefile fornecido. No diretório raiz do projeto, execute:
 
+```bash
+make
+```
 
-sudo apt install python3-pip
+### Execução dos Testes
 
+Após a compilação, você pode executar os testes para gerar os resultados. Execute o seguinte comando:
 
-4 - Verificar a versão do python instalada, com um dos comandos dados no item 1.
+```bash
+./build/main
+```
 
-#### 1.2 - Instalar a biblioteca numpy do python.
+### Gerar Gráficos com GNUplot
 
-O código em python do projeto utiliza a biblioteca numpy para gerar um número entre 2 e 1000, que será a ordem da matriz, e preenche ela aleatoriamente com 0's e 1's. Para instalar essa biblioteca, execute o seguinte comando
+Para gerar os gráficos a partir dos resultados dos testes, utilize o GNUplot com o script fornecido. No terminal, execute:
 
+```bash
+gnuplot
+```
 
-pip3 install numpy
+Após isso, deve-se carregar o script com o seguinte comando:
 
+```bash
+load "CodeData.p"
+```
+### Visualização dos Resultados
 
-#### 1.3 - Instalar o pacote make.
-Como a compilação do projeto é feita por meio de um makefile, é necessário que o usuário tenha o pacote make instalado em seu computador. Isso pode ser feito executando a seguinte linha de comando:
+Os resultados dos testes e os gráficos gerados estarão, respectivamente, disponíveis nos diretórios `PorFuncaoEstado` e `Resultados` Você pode visualizar os arquivos CSV e as imagens PNG para analisar o desempenho dos algoritmos.
 
-
-sudo apt install make
-
-
-Após isso, verifique a versão do make instalada. A versão instalada na máquina onde foram feitos os testes é a 4.3. Você pode checar a versão com o seguinte comando:
-
-
-make --version
-
-
-Se a versão do make instalada for muito superior ou inferior em comparação com a utilizada na craiação deste projeto, você pode desinstalá-la e verificar quais versões voce tem disponível.
-
-Para isso, siga os passos:
-
-1 - Desinstale o make do seu computador:
-
-
-sudo apt remove make
-
-
-2 - Verifique as versões disponíveis do pacote:
-
-
-apt-cache policy make
-
-
-3 - Instale a mesma versão utilizada pelo criador do projeto (4.3) ou a mais próxima possível:
-
-
-sudo apt install make=<versão>
-
-#### 1.4 - Dar permissão ao script shell e executar o comando.
-
-Após isso, será necessário conceder permissão para o script shell em seu diretório - nesse caso, ao arquivo run1.sh. Para isso, digite esse comando no terminal:
-
-
-chmod +x run1.sh
-
-
-Caso você não tenha as permissões de escrita do script, será necessário utilizar sudo na frente do comando:
-
-
-sudo chmod +x run1.sh
-
-
-Após isso, basta executar o seguinte comando em seu terminal:
-
-
-./run1.sh
-
-Isso irá apagar todo o conteúdo dos arquivos de entrada input.mps e de saída geracoes.mps, irá compilar o gerador.py e inserir seu resultado dentro do arquivo de entrada. Após isso, irá limpar a pasta build, que contém o resultado da compilação anterior, caso exista, e realiza uma nova compilação, inserindo o resultado desta na pasta build. Caso a matriz seja válida, ou seja, de ordem 5 ou maior, o usuário fornece no console a quantidade N de gerações que deseja, e o resultado é impresso no arquivo geracoes.mps.
-
-### 2. Utilizar matriz própria.
-Se você deseje utilizar uma matriz específica no Jogo da Vida, você pode inseri-la manualmente no arquivo input.mps e seguir o [passo 1.3](#13---instalar-o-pacote-make) do tópico anterior e, posteriormente, retornar aqui. *Lembrando que a matriz deve, de preferência, ser quadrada*
-
-#### 2.1 - Dar permissão ao script shell e executar o comando.
-
-Depois te ter seguido os passos da instalação do pacote make, será necessário dar permissão para o script shell. Para isso, execute no terminal o comando a seguir:
-
-chmod +x run2.sh
-
-Novamente, caso você não tenha as permissões de escrita do script, será necessário utilizar sudo na frente do comando:
-
-sudo chmod +x run2.sh
-
-Após isso, basta executar o seguinte comando em seu terminal:
-
-./run2.sh
-
-Isso irá apagar todo o conteúdo dos arquivo de saída geracoes.mps. Após isso, irá limpar a pasta build, que contém o resultado da compilação anterior, caso exista, e realiza uma nova compilação, inserindo o resultado desta na pasta build, e então ler a primeira linha da matriz para verificar se ela é de ordem maior ou igual a 5, caso seja válida, o usuário fornece no console a quantidade N de gerações que deseja, e o resultado é impresso no arquivo geracoes.mps.
+Seguindo esses passos, você conseguirá compilar, executar e analisar o projeto com sucesso.
 
 ## 🔚 Conclusão 
 
-Neste projeto, foi implementado o Jogo da Vida, um autômato celular concebido pelo matemático britânico John Horton Conway. Foi utilizada a linguagem de programação C para a implementação principal e Python para gerar matrizes aleatórias.
+Neste projeto, investigamos três variações do algoritmo MinMax, cada uma com diferentes abordagens para encontrar os valores mínimo e máximo em um conjunto de dados. Utilizamos a linguagem de programação C++ para implementar os algoritmos e realizar testes de desempenho em diferentes cenários. A análise dos resultados mostrou que, embora todos os algoritmos tenham complexidade linear \(O(n)\), existem diferenças sutis em suas eficiências práticas devido às constantes envolvidas nas comparações.
 
-O projeto demonstrou a aplicação de conceitos de programação, como loops, condicionais e manipulação de arquivos. Além disso, foram utilizadas ferramentas de desenvolvimento de software, como Makefile e scripts shell, para automatizar o processo de compilação e execução do programa.
+Através deste estudo, foi possível compreender melhor como diferentes estratégias de implementação podem impactar o desempenho de algoritmos, mesmo quando possuem a mesma complexidade assintótica. Espera-se que este trabalho contribua para a escolha de algoritmos mais eficientes em contextos específicos e inspire futuras otimizações e estudos na área de análise de algoritmos.
 
-Espera-se que este projeto sirva como um recurso útil para quem está aprendendo programação e para quem está interessado em autômatos celulares e em simulações de sistemas complexos.
-
-Agradeço por seu interesse no projeto e convido você a contribuir com melhorias e extensões.
+Agradecemos pelo interesse no projeto e encorajamos contribuições e sugestões para melhorias futuras.
 
 ## 💭 Créditos
 
@@ -383,8 +365,10 @@ Este projeto usa um Makefile fornecido pelo professor [Michel Pires Silva](https
 
 Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato comigo. Aqui estão algumas maneiras de fazer isso:
 
-- Email: [memanuel643@gmail.com](mailto:memanuel643@gmail.com)
-- LinkedIn: [Matheus Silva](https://www.linkedin.com/in/matheus-silva-emanuel)
-- GitHub: [Matheus Emanuel](https://github.com/Matheus-Emanue123)
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:memanuel643@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-silva-emanuel) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Matheus-Emanue123)
+
+</div>
 
 Estou ansioso para ouvir de você!

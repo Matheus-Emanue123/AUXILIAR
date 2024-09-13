@@ -144,7 +144,7 @@ markdown
   - `README.md`: Este arquivo.
   - `Makefile`: Makefile para compilar o projeto.
   
-##  Implementação
+## Implementação
 
 ### Bibliotecas Utilizadas
 
@@ -170,7 +170,30 @@ markdown
 
 - **gerarVetorAleatorio**: Esta função gera um vetor de inteiros aleatórios de um tamanho especificado, sendo os possíveis valores para esse tamanho 1000, 10000, 100000 e 500000. Os valores dos inteiros são distribuídos uniformemente entre 0 e 1000.
 
-(colocar aqui sobre variáveis incializadas antes de começar a fazer os testes)
+### Script Python
+
+```markdown
+Este script em Python lê um arquivo CSV chamado `resultados.csv` e separa seus dados em múltiplos arquivos CSV com base em combinações específicas de colunas. Ele cria dois diretórios, `PorFuncaoEstado` e `PorFuncaoVetor`, para armazenar os arquivos de saída. Para cada linha do arquivo de entrada, o script extrai os valores das colunas "Função", "Vetor" e "Estado". Em seguida, ele cria (se ainda não existirem) e escreve em arquivos CSV separados para cada combinação única de "Função" e "Estado" no diretório `PorFuncaoEstado`, e para cada combinação única de "Função" e "Vetor" no diretório `PorFuncaoVetor`. Isso permite organizar os dados de maneira mais granular e específica, facilitando análises posteriores.
+```
+
+### GNUplot
+
+GNUplot é utilizado para gerar gráficos a partir dos resultados dos testes. Os arquivos CSV gerados pelo programa em C++ são utilizados como entrada para o GNUplot, que cria gráficos mostrando o desempenho dos diferentes algoritmos em diferentes cenários. Os gráficos são salvos em arquivos de imagem para análise posterior.
+
+### Variáveis Inicializadas
+
+Antes de iniciar os testes, várias variáveis são criadas e/ou inicializadas:
+
+- **vetores**: Um array de vetores de inteiros, cada um com um tamanho diferente (1000, 10000, 100000, 500000).
+- **max, min**: Variáveis inteiras utilizadas para armazenar os valores máximo e mínimo encontrados pelos algoritmos.
+- **file, fileCSV**: Objetos `std::ofstream` utilizados para salvar os resultados dos testes em arquivos de saída (`resultados.mps` e `resultados.csv`).
+- **funcoes**: Um vetor de funções que contém as três variações do algoritmo MinMax (`MinMax1`, `MinMax2`, `MinMax3`).
+- **estados**: Um vetor de strings que representa os diferentes estados dos vetores (aleatório, crescente, decrescente).
+- **nomesFuncoes**: Um vetor de strings que contém os nomes das funções (`"MinMax1"`, `"MinMax2"`, `"MinMax3"`).
+
+Essas variáveis são utilizadas ao longo da execução dos testes para armazenar dados temporários e salvar os resultados finais.
+
+
 
 ## 🧪 Resultados e Análises 
 
@@ -362,7 +385,6 @@ Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em c
 
 - Email: [memanuel643@gmail.com](mailto:memanuel643@gmail.com)
 - LinkedIn: [Matheus Silva](https://www.linkedin.com/in/matheus-silva-emanuel)
-
 - GitHub: [Matheus Emanuel](https://github.com/Matheus-Emanue123)
 
 Estou ansioso para ouvir de você!

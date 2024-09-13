@@ -22,7 +22,7 @@ Neste projeto, investigamos três variações do algoritmo MinMax, criado pelo p
 
 Nesta seção, abordaremos os 3 algoritmos propostos, analisando seu funcionamento e custo computacional em diferentes casos. Na figura abaixo temos os valores das funções `f(n)` para cada cada um dos algortimos em cada um dos casos - melhor, médio e pior.
 
-![alt text](imagens/custoAlg.png)
+![alt text](TrabalhoMaxMin/imagens/custoAlg.png)
 
 Como pode-se observar ao analisar a imagem, embora todos os algoritmos tenham custo linear, ou seja, \(O(n)\), é possível notar algumas diferenças, mesmo que pequenas, nas constantes que influenciam seu desempenho. Isso significa que, em valores muito grandes de \(n\), eles podem acabar se comportando de maneira semelhante, desde que as entradas estejam ordenadas de forma a não impactar tanto.
 

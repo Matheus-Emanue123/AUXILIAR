@@ -126,14 +126,6 @@ Assim como nos anteriores, mesmo com essas variações no número de comparaçõ
 - Aplicar testes para avaliar o desempenho dos algoritmos em cenários variados.
 - Demonstrar os resultados dos testes e suas implicações para a escolha do algoritmo mais eficiente.
 
-## 🖥 Ambiente de Criação (colocar isso mais pro final, com as especifidades da maquina pipipipopopo)
-
-O código foi desenvolvido utilizando as seguintes ferramentas:
-
-[![Linguagem](https://img.shields.io/badge/Linguagem-C++-blue)](https://www.w3schools.com/c/c_intro.php)
-[![IDE](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blueviolet)](https://code.visualstudio.com/docs/?dv=linux64_deb)
-[![Sistema Operacional](https://img.shields.io/badge/ISO-Ubuntu%20Linux%2022.04-red)](https://ubuntu.com/)
-
 ## 📂 Organização dos Arquivos no Diretório
 Os arquivos criados para o funcionamento do projeto estão dispostos da seguinte maneira do diretório:
 
@@ -178,6 +170,8 @@ markdown
 
 - **gerarVetorAleatorio**: Esta função gera um vetor de inteiros aleatórios de um tamanho especificado, sendo os possíveis valores para esse tamanho 1000, 10000, 100000 e 500000. Os valores dos inteiros são distribuídos uniformemente entre 0 e 1000.
 
+(colocar aqui sobre variáveis incializadas antes de começar a fazer os testes)
+
 ## 🧪 Resultados e Análises 
 
 Nesta seção, apresentaremos os resultados obtidos a partir da execução dos testes com os algoritmos MinMax 1, MinMax 2 e MinMax 3. Espera-se que nosso código identifique corretamente os valores máximo e mínimo em diferentes conjuntos de dados, além de medir o tempo de execução de cada algoritmo em cenários variados (aleatório, crescente e decrescente). A análise dos resultados permitirá avaliar a eficiência e a performance prática de cada variação do algoritmo MinMax. Para garantir a precisão dos resultados, cada algoritmo será executado 10 vezes em cada um dos cenários (aleatório, crescente e decrescente). A média dos tempos de execução será calculada para fornecer uma visão clara da performance de cada algoritmo em diferentes situações. Isso nos permitirá identificar qual algoritmo é mais eficiente em termos de tempo de execução e robustez em diferentes condições de entrada.
@@ -212,6 +206,12 @@ Esses arquivos são gerados e atualizados durante a execução da função `exec
 
 
 ## 👨🏻‍🔬 Ambiente de Teste
+
+O código foi desenvolvido utilizando as seguintes ferramentas:
+
+[![Linguagem](https://img.shields.io/badge/Linguagem-C++-blue)](https://www.w3schools.com/c/c_intro.php)
+[![IDE](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-blueviolet)](https://code.visualstudio.com/docs/?dv=linux64_deb)
+[![Sistema Operacional](https://img.shields.io/badge/ISO-Ubuntu%20Linux%2022.04-red)](https://ubuntu.com/)
 
 Este projeto foi testado no seguinte ambiente:
 
@@ -362,7 +362,7 @@ Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em c
 
 - Email: [memanuel643@gmail.com](mailto:memanuel643@gmail.com)
 - LinkedIn: [Matheus Silva](https://www.linkedin.com/in/matheus-silva-emanuel)
-- Instagram: [@mat_emanuel9](https://www.instagram.com/mat_emanuel9/)
+
 - GitHub: [Matheus Emanuel](https://github.com/Matheus-Emanue123)
 
 Estou ansioso para ouvir de você!

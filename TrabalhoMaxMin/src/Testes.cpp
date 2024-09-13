@@ -1,6 +1,6 @@
 #include "Testes.hpp"
 #include "GerarVetores.hpp"
-#include "MaxMin.hpp"
+#include "MinMax.hpp"
 #include <iostream>
 #include <algorithm>
 #include <chrono>
@@ -11,10 +11,10 @@ void executarTestes() {
     int max, min;
     std::ofstream file("resultados.mps");
 
-    std::vector<std::function<void(std::vector<int>&, int&, int&)>> funcoes = {MaxMin1, MaxMin2, MaxMin3};
+    std::vector<std::function<void(std::vector<int>&, int&, int&)>> funcoes = {MinMax1, MinMax2, MinMax3};
     std::vector<std::string> estados = {"aleatório", "crescente", "decrescente"};
 
-    std::vector<std::string> nomesFuncoes = {"MaxMin1", "MaxMin2", "MaxMin3"};
+    std::vector<std::string> nomesFuncoes = {"MinMax1", "MinMax2", "MinMax3"};
 
     std::ofstream fileCSV("resultados.csv");
     fileCSV << "Função,Vetor,Max,Min,Estado,Tempo Médio\n";

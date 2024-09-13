@@ -235,20 +235,20 @@ A seguir, apresentamos três gráficos que ilustram o desempenho dos algoritmos 
 
 #### Gráfico 1: Tempo de Execução Médio MinMax1
 
-![Tempo de Execução Médio MinMax1](Resultados/DatasetsMinMax1.png)
+![Tempo de Execução Médio MinMax1](TrabalhoMaxMin/Resultados/DatasetsMinMax1.png)
 
 A análise do gráfico 1 mostra o tempo de execução médio do algoritmo MinMax1 em diferentes cenários. Observa-se que o tempo de execução aumenta linearmente com o tamanho do vetor, confirmando a complexidade \(O(n)\) do algoritmo. Em vetores ordenados de forma crescente, decrescente ou aleatória, o comportamento do algoritmo permanece consistente, demonstrando sua robustez e eficiência em diferentes condições de entrada. No entanto, é importante notar que, apesar da linearidade, o tempo absoluto de execução pode variar devido a fatores como a constante de tempo associada às operações de comparação e a eficiência do hardware utilizado.
 
 #### Gráfico 2: Tempo de Execução Médio MinMax2
 
-![Tempo de Execução Médio MinMax2](Resultados/DatasetsMinMax2.png)
+![Tempo de Execução Médio MinMax2](TrabalhoMaxMin/Resultados/DatasetsMinMax2.png)
 
 A análise do gráfico 2 mostra o tempo de execução médio do algoritmo MinMax2 em diferentes cenários. Assim como no MinMax1, o tempo de execução do MinMax2 também aumenta linearmente com o tamanho do vetor, confirmando a complexidade \(O(n)\) do algoritmo. No entanto, devido à otimização com a estrutura de controle `else if`, o MinMax2 tende a ser ligeiramente mais eficiente em cenários onde as comparações desnecessárias são evitadas. Em vetores ordenados de forma crescente, decrescente ou aleatória, o comportamento do algoritmo permanece consistente, demonstrando sua robustez e eficiência em diferentes condições de entrada. A diferença de desempenho entre os cenários é mínima, mas perceptível, especialmente em vetores grandes, onde a otimização pode resultar em uma redução significativa no tempo de execução absoluto.
 
 
 #### Gráfico 3: Tempo de Execução Médio MinMax3
 
-![Tempo de Execução Médio MinMax3](Resultados/DatasetsMinMax3.png)
+![Tempo de Execução Médio MinMax3](TrabalhoMaxMin/Resultados/DatasetsMinMax3.png)
 
 A análise do gráfico 3 mostra o tempo de execução médio do algoritmo MinMax3 em diferentes cenários. Assim como nos algoritmos anteriores, o tempo de execução do MinMax3 aumenta linearmente com o tamanho do vetor, confirmando a complexidade \(O(n)\) do algoritmo. No entanto, devido à abordagem de comparação em pares, o MinMax3 tende a ser mais eficiente em termos de número de comparações realizadas. Em vetores ordenados de forma crescente, decrescente ou aleatória, o comportamento do algoritmo permanece consistente, demonstrando sua robustez e eficiência em diferentes condições de entrada. A diferença de desempenho entre os cenários é mínima, mas perceptível, especialmente em vetores grandes, onde a otimização pode resultar em uma redução significativa no tempo de execução absoluto.
 

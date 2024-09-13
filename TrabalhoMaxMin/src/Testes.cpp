@@ -48,3 +48,4 @@ std::ofstream fileCSV("resultados.csv");
         }
     }
     fileCSV.close();
+}

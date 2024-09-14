@@ -1,14 +1,14 @@
 <div align="center">
     
-    <div align="center">
+<div align="center">
         <img src="/logo.jpeg" width="200" height="200">
     </div>
 
-    <div align="center">
-        # 🪐 MinMax
-    </div>
+    
+# 🪐 MinMax
+    
 
- ## ☕ Introdução
+## ☕ Introdução
 
 Este trabalho foi proposto pelo professor [Michel Pires Silva](https://github.com/mpiress), da matéria Algoritmos e Estrutura de Dados I, do Centro Federal de Educação Tecnológica de Minas Gerais (CEFET - MG), Campus V - Divinópolis.
 

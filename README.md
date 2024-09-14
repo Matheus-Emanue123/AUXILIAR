@@ -1,10 +1,8 @@
 <div align="center">
         <img src="/logo.jpeg" width="200" height="200">
-    </div>
 
-    
 # 🪐 MinMax
-    
+</div>
 
 ## ☕ Introdução
 

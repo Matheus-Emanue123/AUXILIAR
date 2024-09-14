@@ -1,20 +1,20 @@
 <div align="center">
-    <img src="/logo.jpeg" width="200" height="200">
-</div>
+    ```markdown
+    <div align="center">
+        <img src="/logo.jpeg" width="200" height="200">
+    </div>
 
-<div align="center">
+    <div align="center">
+        # 🪐 MinMax
+    </div>
 
-# 🪐 MinMax
+    ## ☕ Introdução
 
-</div>
+    Este trabalho foi proposto pelo professor [Michel Pires Silva](https://github.com/mpiress), da matéria Algoritmos e Estrutura de Dados I, do Centro Federal de Educação Tecnológica de Minas Gerais (CEFET - MG), Campus V - Divinópolis.
 
-## ☕ Introdução
+    A eficiência dos algoritmos é fundamental para o desempenho de sistemas computacionais, especialmente em contextos onde grandes volumes de dados são processados. A busca por algoritmos mais rápidos e eficientes envolve a análise detalhada de seu comportamento frente a diferentes tamanhos de entrada. A análise assintótica, frequentemente referida como "análise de complexidade Big O (𝑂)", é uma ferramenta amplamente utilizada para medir o crescimento do tempo de execução de um algoritmo conforme o tamanho da entrada, 𝑛, aumenta.
 
-Este trabalho foi proposto pelo professor [Michel Pires Silva](https://github.com/mpiress), da matéria Algoritmos e Estrutura de Dados I, do Centro Federal de Educação Tecnológica de Minas Gerais (CEFET - MG), Campus V - Divinópolis.
-
-A eficiência dos algoritmos é fundamental para o desempenho de sistemas computacionais, especialmente em contextos onde grandes volumes de dados são processados. A busca por algoritmos mais rápidos e eficientes envolve a análise detalhada de seu comportamento frente a diferentes tamanhos de entrada. A análise assintótica, frequentemente referida como "análise de complexidade Big O (𝑂)", é uma ferramenta amplamente utilizada para medir o crescimento do tempo de execução de um algoritmo conforme o tamanho da entrada, 𝑛, aumenta.
-
-Essa técnica de análise nos permite estimar o comportamento do algoritmo a longo prazo, quando 𝑛 tende ao infinito, oferecendo uma perspectiva clara sobre sua escalabilidade. No entanto, é importante notar que a análise assintótica considera apenas a quantidade de interações do algoritmo com os dados, sem levar em conta variações no hardware ou em outros fatores de implementação que podem afetar o desempenho real em termos de tempo de execução. Assim, mesmo que dois algoritmos apresentem a mesma complexidade, seu desempenho prático pode variar em determinadas situações.
+    Essa técnica de análise nos permite estimar o comportamento do algoritmo a longo prazo, quando 𝑛 tende ao infinito, oferecendo uma perspectiva clara sobre sua escalabilidade. No entanto, é importante notar que a análise assintótica considera apenas a quantidade de interações do algoritmo com os dados, sem levar em conta variações no hardware ou em outros fatores de implementação que podem afetar o desempenho real em termos de tempo de execução. Assim, mesmo que dois algoritmos apresentem a mesma complexidade, seu desempenho prático pode variar em determinadas situações.
 
 Neste projeto, investigamos três variações do algoritmo MinMax, criado pelo professor Nívio Ziviani, da Universidade Federal de Minas Gerais (UFMG). Esses algoritmos têm como objetivo encontrar simultaneamente o menor e o maior valor em um conjunto de dados, e cada variação – MinMax 1, MinMax 2 e MinMax 3 – adota diferentes abordagens para essa busca, resultando em diferentes custos computacionais. Ao longo deste trabalho, buscamos não apenas explicar o funcionamento detalhado de cada variação, mas também comparar seu comportamento em termos de complexidade computacional, utilizando a análise assintótica como base. Para além da teoria, apresentaremos os resultados de testes empíricos, que ilustram o desempenho prático de cada algoritmo em diferentes cenários.
    
@@ -129,22 +129,30 @@ Assim como nos anteriores, mesmo com essas variações no número de comparaçõ
 - Demonstrar os resultados dos testes e suas implicações para a escolha do algoritmo mais eficiente.
 
 ## 📂 Organização dos Arquivos no Diretório
-Os arquivos criados para o funcionamento do projeto estão dispostos da seguinte maneira do diretório:
 
-markdown
-- - `/TrabalhoMaxMin`: Diretório raiz do projeto.
-  - `/build`: Diretório gerado ao usar o Makefile.
-  - `/img`: Diretório para imagens. Contém o logo do projeto e prints do código.
-  - `/src`: Diretório para o código fonte.
-    - `GerarVetores.cpp`: Arquivo para gerar os vetores aleatórios para os testes.
-    - `GerarVetores.cpp`: Arquivo de cabeçalho do GerarVetores.cpp.
-    - `MinMax.cpp`: Arquivo com a implementação de cada um dos algoritmos MinMax.
-    - `MinMax.cpp`: Arquivo de cabeçalho do MinMax.cpp.
-    - `Testes.cpp`: Arquivo com a função que realiza os testes de acordo com as regras dadas.
-    - `Testes.hpp`: Arquivo de cabeçalho do Testes.cpp.
-    - `main.cpp`: Arquivo principal do projeto em C++.
-  - `README.md`: Este arquivo.
-  - `Makefile`: Makefile para compilar o projeto.
+Os arquivos criados para o funcionamento do projeto estão dispostos da seguinte maneira no diretório:
+```markdown
+/TrabalhoMaxMin
+├── /build                # Diretório gerado ao usar o Makefile.
+├── /img                  # Diretório para imagens. Contém o logo do projeto e prints do código.
+├── /src                  # Diretório para o código fonte.
+│   ├── GerarVetores.cpp  # Arquivo para gerar os vetores aleatórios para os testes.
+│   ├── GerarVetores.hpp  # Arquivo de cabeçalho do GerarVetores.cpp.
+│   ├── MinMax.cpp        # Arquivo com a implementação de cada um dos algoritmos MinMax.
+│   ├── MinMax.hpp        # Arquivo de cabeçalho do MinMax.cpp.
+│   ├── Testes.cpp        # Arquivo com a função que realiza os testes de acordo com as regras dadas.
+│   ├── Testes.hpp        # Arquivo de cabeçalho do Testes.cpp.
+│   └── main.cpp          # Arquivo principal do projeto em C++.
+├── /Resultados           # Diretório para armazenar os resultados dos testes e gráficos gerados.
+│   ├── DatasetsMinMax1.png  # Gráfico de desempenho do MinMax1.
+│   ├── DatasetsMinMax2.png  # Gráfico de desempenho do MinMax2.
+│   └── DatasetsMinMax3.png  # Gráfico de desempenho do MinMax3.
+├── /scripts              # Diretório para scripts auxiliares.
+│   └── separar_dados.py  # Script Python para separar os dados dos resultados.
+├── README.md             # Este arquivo.
+├── Makefile              # Makefile para compilar o projeto.
+└── CodeData.p            # Script GNUplot para gerar gráficos a partir dos resultados.
+```
   
 ## Implementação
 
